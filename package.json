@@ -1,0 +1,12 @@
+{
+  "name": "restaurent_platform",
+  "version": "1.0.0",
+  "description": "A simple restaurant platform",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass --watch sass/main.scss css/style.css",
+    "test": "Compile:css"
+  },
+  "author": "Abraham K. Blama",
+  "license": "ISC"
+}
