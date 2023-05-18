@@ -9,9 +9,12 @@ html {
 }
 body {
     box-sizing: border-box;
-    background-color: #fdf2e9;
     font-family: "Rubik", Arial, Helvetica, sans-serif;
+    line-height: 1.1;
+    color: #464646;
 }
+
+/* || NAVIGATION BAR STARTS HERE || */
 
 .navbar {
     display: flex;
@@ -44,16 +47,14 @@ body {
   
 }
 
-.nav__ul .nav__items {
-    margin-right: 4rem;
-}
 .nav__ul .nav__items a {
     text-decoration: none;
     color: inherit;
     font-size: inherit;
 }
 
-.nav__ul .nav__items:not(:last-child) {
+.nav__ul .nav__items:not(:nth-child(5)) {
+    margin-right: 3rem;
     
 }
 
@@ -62,4 +63,197 @@ body {
     background-color: #E67E22;
     border-radius: 8px;
     color: #fff;
+    margin-right: 1.5rem;
+}
+.spanBookSpace {
+    padding: .8rem 1.5rem;
+    background-color: #000;
+    border-radius: 8px;
+    color: #ff7700;
+}
+
+/* || HERO SECTION STARTS HERE || */
+.hero__section {
+    height: 72vh;
+    background-color: #fdf2e9;
+}
+
+.hero__section >.hero__box {
+    width: 65%;
+    margin: 0 auto;
+    display: flex;
+    gap: 2rem;
+    font-size: 1.6rem;
+}
+
+/* HERO TEXT SECTION AND BUTTONS STARTS HERE */
+.hero__section .hero__box .hero__section__text{
+    width: 50%;
+    font-size: 1.6rem;
+
+    /* border: 3px solid blue; */
+}
+.hero__section .hero__box .hero__section__text .heading__primary{
+    padding: 5rem 0;
+    padding-bottom: 3rem;
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: #313131;
+
+    /* border: 3px solid red; */
+}
+.hero__section .hero__box .hero__section__text .heading__primary span{
+    color: #E67E22;
+}
+.hero__section .hero__box .hero__section__text p{
+    width: 95%;
+    font-size: 2rem;
+    font-weight: 300;
+    line-height: 1.5;
+    color: #3f3f3f;
+    padding-bottom: 3rem;
+
+    /* border: 3px solid red; */
+}
+
+.hero__btn:link,
+.hero__btn:visited {
+    display: inline-block;
+    padding: 1.4rem 2rem;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: .8rem;
+    margin: 1.8rem 0;
+    
+    
+}
+
+.hero__btn:not(:last-child) {
+    margin-right: 2rem;
+}
+
+.hero__btn--1 {
+    background-color: #E67E22;
+    color: #fff;
+}
+.hero__btn--2 {
+    background-color: #fff;
+    color: #474646;
+}
+
+.img__sub {
+    width: 4.5rem;
+    height: 4.5rem;
+    border-radius: 50%;
+    border: .5rem solid #fdf2e9;
+}
+
+.subscribers__box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+
+    /* border: 2px solid; */
+}
+.subscribers {
+    width: 35%;
+
+    /* border: 3px solid; */
+}
+.subscribers__count {
+    font-weight: 700;
+
+}
+.subscribers__count span{
+    color: #E67E22;
+    font-weight: 700;
+}
+
+.img__sub:not(:nth-child(1)) {
+    margin-left: -2rem;
+}
+
+
+/* || HERO FOOD IMAGES START HERE || */ 
+
+.hero__section__food{
+    width: 50%;
+    /* border: 2PX solid green; */
+    position: relative;
+}
+
+/* || IMAGE STYLE || */
+.hero__food__img {
+    width: 50%;
+    transform: scale(1);
+    position: absolute;
+    transition: all .4s;
+}
+
+.hero__section__food .hero__food__img--1{
+    width: 48%;
+    top: 8rem;
+    transition: all .4s;
+}
+.hero__section__food .hero__food__img--2{
+    width: 48%;
+    top: 26rem;
+}
+.hero__section__food .hero__food__img--3{
+    top: 6rem;
+    right: 0;
+} 
+
+.hero__food__span {
+    text-align: center;
+    color: #fff;
+    position: absolute;
+    text-shadow: 0 .2rem 1rem rgb(0, 0, 0);
+    z-index: 2;
+    transition: all .4s;
+}
+.hero__food__span--1 {
+    top: 18rem;
+    left: 2rem;
+    visibility: hidden;
+    opacity: 0;
+    
+}
+.hero__food__span--2 {
+    top: 38rem;
+    left: 2rem;
+    opacity: 0;
+}
+.hero__food__span--3 {
+    top: 30rem;
+    right: 3rem;
+    opacity: 0;
+}
+
+/* || IMAGE FUNCTIONALITY || */
+
+.hero__food__img:hover {
+    filter: blur(1px) brightness();  
+}
+.hero__food__img:hover  {
+    transform: scale(1.05);  
+    z-index: 1;
+}
+
+.hero__food__img--1:hover + .hero__food__span--1 {
+    top: 14rem;
+    visibility: visible;
+    opacity: 1;
+}
+.hero__food__img--2:hover + .hero__food__span--2 {
+    top: 34rem;
+    visibility: visible;
+    opacity: 1;
+}
+.hero__food__img--3:hover + .hero__food__span {
+    top: 24rem;
+    visibility: visible;
+    opacity: 1;
 }
