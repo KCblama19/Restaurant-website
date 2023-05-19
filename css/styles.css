@@ -116,10 +116,11 @@ body {
     /* border: 3px solid red; */
 }
 
+/* || HERO BUTTONS STYLE || */
 .hero__btn:link,
 .hero__btn:visited {
     display: inline-block;
-    padding: 1.4rem 2rem;
+    padding: 1.2rem 2rem;
     text-decoration: none;
     font-size: 1.8rem;
     font-weight: 700;
@@ -135,12 +136,41 @@ body {
 
 .hero__btn--1 {
     background-color: #E67E22;
+    border: 3px solid #E67E22;
     color: #fff;
+    transition: .2s;
+    backface-visibility: hidden;
 }
 .hero__btn--2 {
     background-color: #fff;
+    border: 3px solid #fff;
     color: #474646;
+    transition: all .2s;
 }
+
+/* || HERO BUTTON FUNCTIONALITY */
+
+.hero__btn--1:hover {
+    background-color: #ef892f;
+    transform: scale(1.05) translateY(-2px);
+    backface-visibility: hidden;
+}
+
+.hero__btn--1:active {
+    transform: scale(1) translateY(0);
+}
+
+.hero__btn--2:hover {
+    background-color: #fdf2e9;
+    border-radius: 8px;
+    transform: scale(1.05) translateY(-2px);
+    backface-visibility: hidden;
+}
+
+.hero__btn--2:active {
+    transform: scale(1) translateY(0);
+}
+
 
 .img__sub {
     width: 4.5rem;
@@ -180,8 +210,9 @@ body {
 
 .hero__section__food{
     width: 50%;
-    /* border: 2PX solid green; */
     position: relative;
+
+    /* border: 2PX solid green; */
 }
 
 /* || IMAGE STYLE || */
@@ -256,4 +287,43 @@ body {
     top: 24rem;
     visibility: visible;
     opacity: 1;
+}
+
+.feature__section {
+    text-align: center;
+}
+.feature__section h3 {
+    width: 25%;
+    margin: 0 auto;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #7a7a7a;
+    padding: 3rem 0;
+    position: relative;
+}
+.feature__section h3::before {
+    content: "";
+    width: 8rem;
+    height: .2rem;
+    background-color: #E67E22;
+    display: inline-block;
+    position: absolute;
+    top: 5.5rem;
+    left: 17.6rem;
+}
+.feature__section h3::after {
+    content: "";
+    width: 1.5rem;
+    height: .6rem;
+    background-color: #E67E22;
+    display: inline-block;
+    position: absolute;
+    top: 5.6rem;
+    right: 20.8rem;
+}
+
+.features__logo {
+    width: 8%;
+    margin-right: 6rem;
 }
